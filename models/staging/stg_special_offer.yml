@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_special_offer
+    description: This is the staging table for special_offer
+
+    columns:
+      - name: special_offer_sk
+        description: This is a surrogate key for a special_offer
+        data_tests:
+          - unique
+          - not_null
+          
+      - name: special_offer_pk
+        description: This is a unique identifier for a special_offer
+
+      - name: special_offer_description
+        description: This is the description of the special_offer
+        
+      - name: special_offer_discount_pct
+        description: This is the percentage of the discount
+
+      - name: special_offer_start_date
+        description: This is the start date of the special_offer
+      
+      - name: special_offer_end_date
+        description: This is the end date of the special_offer

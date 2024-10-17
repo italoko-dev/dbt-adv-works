@@ -5,18 +5,42 @@ sources:
     database: FEA24_9  
     schema: raw_adventure_works  
     tables:
-      - name: product
-        description: raw data product table from adventure works
-        columns:
-          - name: productid
-            data_tests:
-              - unique
-              - not_null
-
       - name: person
         description: raw data persons table from adventure works
         columns:
           - name: businessentityid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: customer
+        description: raw data customer table from adventure works
+        columns:
+          - name: customerid
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: salesreason
+        description: raw data salesreason table from adventure works
+        columns:
+          - name: salesreasonid
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: salesperson
+        description: raw data salesperson table from adventure works
+        columns:
+          - name: businessentityid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: product
+        description: raw data product table from adventure works
+        columns:
+          - name: productid
             data_tests:
               - unique
               - not_null

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_person
+    description: This is the staging table for person
+
+    columns:
+      - name: person_sk
+        description: This is a surrogate key for a person
+        data_tests:
+          - unique
+          - not_null
+
+      - name: person_pk
+        description: This is a unique identifier for a person
+
+      - name: person_type
+        description: This is the type of the person
+
+      - name: person_full_name
+        description: This is the full name of the person
