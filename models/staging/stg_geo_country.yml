@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_geo_country
+    description: This is the staging table for geo_country
+
+    columns:
+      - name: country_pk
+        description: This is a primary key (Country code) for a geo_country
+      
+      - name: country_name
+        description: State name

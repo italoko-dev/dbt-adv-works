@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_sales_person
+    description: This is the staging table for sales_person
+
+    columns:
+      - name: sales_person_pk
+        description: This is a primary key for a sales_person
+
+      - name: sales_person_territory_fk
+        description: This is a foreign key for a territory

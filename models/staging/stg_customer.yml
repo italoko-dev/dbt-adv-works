@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_customer
+    description: This is the staging table for customer
+
+    columns:
+      - name: customer_sk
+        description: This is a surrogate key for a customer
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_pk
+        description: This is a unique identifier for a customer
+      
+      - name: person_fk
+        description: This is a foreign identifier for a person
+      
+      - name: territory_fk
+        description: This is a foreign identifier for a territory

@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_sales_order_header
+    description: This is the staging table for sales_order_header
+
+    columns:
+      - name: sales_order_header_pk
+        description: This is a primary key for a sales_order_header
+      
+      - name: sales_order_customer_fk
+        description: This is a primary key for a sales_order_header
+      
+      - name: sales_order_sales_person_fk
+        description: This is a foreign key for a sales_person
+      
+      - name: sales_order_territory_fk
+        description: This is a foreign key for a territory
+      
+      - name: sales_order_cred_card_fk
+        description: This is a foreign key for a cred_card
+
+      - name: sales_order_date
+        description: order_date
+        
+      - name: sales_order_status
+        description: order_status
+      
+      - name: sales_order_subtotal
+        description: order_subtotal
+      
+      - name: sales_order_taxamt
+        description: order_taxamt
+      
+      - name: sales_order_total_due
+        description: order_total_due

@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_credit_card
+    description: This is the staging table for cred_card
+
+    columns:
+      - name: cred_card_sk
+        description: This is a surrogate key for a cred_card
+        data_tests:
+          - unique
+          - not_null
+
+      - name: cred_card_pk
+        description: This is a unique identifier for a cred_card
+
+      - name: cred_card_type
+        description: This is the type of the cred_card
+        

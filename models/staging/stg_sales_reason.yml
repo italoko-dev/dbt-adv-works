@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_sales_reason
+    description: This is the staging table for sales_reason
+
+    columns:
+      - name: sales_reason_sk
+        description: This is a surrogate key for a sales_reason
+        data_tests:
+          - unique
+          - not_null
+
+      - name: sales_reason_pk
+        description: This is a unique identifier for a sales_reason
+      
+      - name: sales_reason_name
+        description: This name for a sales_reason
+      
+      - name: sales_reason_type
+        description: This type name for a sales_reason

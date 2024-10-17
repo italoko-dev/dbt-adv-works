@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_employee
+    description: This is the staging table for employee
+
+    columns:
+      - name: employee_pk
+        description: This is a primary key for a employee
+
+      - name: employee_nat_id_number
+        description: National id number of the employee
+      
+      - name: employee_job_title
+        description: Employee Job Title

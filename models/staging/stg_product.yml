@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_product
+    description: This is the staging table for product
+
+    columns:
+      - name: product_sk
+        description: This is a surrogate key for a product
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product_pk
+        description: This is a unique identifier for a product
+
+      - name: product_name
+        description: This is the name of the product
+
+      - name: product_number
+        description: This is the product number
+
+      - name: product_color
+        description: This is the color of the product
+
+      - name: product_standard_cost
+        description: This is the standard cost of the product
+
+      - name: product_list_price
+        description: This is the list price of the product
+        

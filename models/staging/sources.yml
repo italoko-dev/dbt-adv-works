@@ -5,18 +5,96 @@ sources:
     database: FEA24_9  
     schema: raw_adventure_works  
     tables:
-      - name: product
-        description: raw data product table from adventure works
-        columns:
-          - name: productid
-            data_tests:
-              - unique
-              - not_null
-
       - name: person
         description: raw data persons table from adventure works
         columns:
           - name: businessentityid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: customer
+        description: raw data customer table from adventure works
+        columns:
+          - name: customerid
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: salesreason
+        description: raw data salesreason table from adventure works
+        columns:
+          - name: salesreasonid
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: salesperson
+        description: raw data salesperson table from adventure works
+        columns:
+          - name: businessentityid
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: employee
+        description: raw data employee table from adventure works
+        columns:
+          - name: businessentityid
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: stateprovince
+        description: raw data stateprovince table from adventure works
+        columns:
+          - name: stateprovinceid
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: address
+        description: raw data address table from adventure works
+        columns:
+          - name: addressid
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: countryregion
+        description: raw data countryregion table from adventure works
+        columns:
+          - name: countryregioncode
+            data_tests:
+              - unique
+              - not_null
+
+      - name: salesorderheader
+        description: raw data salesorderheader table from adventure works
+        columns:
+          - name: salesorderid
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: salesorderdetail
+        description: raw data salesorderdetail table from adventure works
+        columns:
+          - name: salesorderid
+            data_tests:
+              - unique
+              - not_null
+
+          - name: salesorderdetailid
+            data_tests:
+              - unique
+              - not_null
+
+
+      - name: product
+        description: raw data product table from adventure works
+        columns:
+          - name: productid
             data_tests:
               - unique
               - not_null
@@ -37,4 +115,4 @@ sources:
               - unique
               - not_null
 
-      - name: salesorderheader
+      

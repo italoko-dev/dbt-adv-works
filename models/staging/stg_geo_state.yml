@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_geo_state
+    description: This is the staging table for geo_state
+
+    columns:
+      - name: state_province_pk
+        description: This is a primary key for a geo_state
+      
+      - name: state_province_name
+        description: State name
+      
+      - name: state_province_country_code
+        description: State province country code
