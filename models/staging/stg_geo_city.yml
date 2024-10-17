@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_geo_city
+    description: This is the staging table for geo_address
+
+    columns:
+      - name: address_pk
+        description: This is a primary key for a geo_address
+      
+      - name: address_city_name
+        description: City name

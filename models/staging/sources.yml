@@ -44,6 +44,30 @@ sources:
             data_tests:
               - unique
               - not_null
+      
+      - name: stateprovince
+        description: raw data stateprovince table from adventure works
+        columns:
+          - name: stateprovinceid
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: address
+        description: raw data address table from adventure works
+        columns:
+          - name: addressid
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: countryregion
+        description: raw data countryregion table from adventure works
+        columns:
+          - name: countryregioncode
+            data_tests:
+              - unique
+              - not_null
 
       - name: product
         description: raw data product table from adventure works
