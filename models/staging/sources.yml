@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: adv_works
+    database: FEA24_9  
+    schema: raw_adventure_works  
+    tables:
+      - name: product
+        description: raw data product table from adventure works
+        columns:
+          - name: productid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: person
+        description: raw data persons table from adventure works
+        columns:
+          - name: businessentityid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: creditcard
+        description: raw data credit card table from adventure works
+        columns:
+          - name: creditcardid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: specialoffer
+        description: raw data special offer table from adventure works
+        columns:
+          - name: specialofferid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: salesorderheader
