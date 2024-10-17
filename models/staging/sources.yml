@@ -36,6 +36,14 @@ sources:
             data_tests:
               - unique
               - not_null
+      
+      - name: employee
+        description: raw data employee table from adventure works
+        columns:
+          - name: businessentityid
+            data_tests:
+              - unique
+              - not_null
 
       - name: product
         description: raw data product table from adventure works
