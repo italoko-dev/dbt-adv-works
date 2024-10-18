@@ -5,6 +5,7 @@ with
                 productid::string || '-' || productnumber::string
             ) as string) as product_sk
             , cast(productid as int) as product_pk
+            , cast(productsubcategoryid as int )product_subcategory_fk
             , cast(name as string) as product_name
             , cast(productnumber as string) as product_number
             , cast(color as string) as product_color
