@@ -123,12 +123,6 @@ sources:
               - unique
               - not_null
 
-      - name: specialoffer
-        description: raw data special offer table from adventure works
-        columns:
-          - name: specialofferid
-            data_tests:
-              - unique
-              - not_null
-
+      - name: salesorderheadersalesreason
+        description: Cross-reference table mapping sales orders to sales reason codes.
       

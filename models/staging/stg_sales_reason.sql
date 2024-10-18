@@ -3,7 +3,7 @@ with
         select
            salesreasonid as sales_reason_pk
            , name as sales_reason_name
-           , reason_type as sales_reason_type
+           , reasontype as sales_reason_type
         from {{ source('adv_works', 'salesreason') }}        
     )
 
