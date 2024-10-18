@@ -6,11 +6,14 @@ with
             , cast(salespersonid as int) as sales_order_sales_person_fk
             , cast(territoryid as int) as sales_order_territory_fk
             , cast(creditcardid as int) as sales_order_cred_card_fk
+            , cast(shiptoaddressid as int) as sales_order_address_id_fk
             
             , cast(orderdate as date) as sales_order_date
             , cast(status as int) as sales_order_status
             
+            
             , cast(subtotal as numeric(18,4)) as sales_order_subtotal
+            , cast(freight as numeric(18,4)) as sales_order_freight
             , cast(taxamt as numeric(18,4)) as sales_order_taxamt
             , cast(totaldue as numeric(18,4)) as sales_order_total_due
         from {{ source('adv_works', 'salesorderheader') }}        
