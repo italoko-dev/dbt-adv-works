@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_product_category
+    description: Staging table for category of the product
+
+    columns:
+
+      - name: product_category_pk
+        description: to-do
+
+      - name: product_category
+        description: to-do

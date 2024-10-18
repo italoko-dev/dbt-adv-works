@@ -98,6 +98,22 @@ sources:
             data_tests:
               - unique
               - not_null
+      
+      - name: productcategory
+        description: raw data product table from adventure works
+        columns:
+          - name: productcategoryid
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: productsubcategory
+        description: raw data product table from adventure works
+        columns:
+          - name: productsubcategoryid
+            data_tests:
+              - unique
+              - not_null
 
       - name: creditcard
         description: raw data credit card table from adventure works
