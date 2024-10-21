@@ -23,5 +23,14 @@ with
             sales_order_reason.sales_reason_fk = sales_reason.sales_reason_pk
     )
 
-select *
-from sales_reason_detail
+    , agg_sales_reason_detail as (
+        select 
+            sales_order_fk
+            , listagg(sales_reason_name, ', ') within group (order by sales_reason_name) as sales_reasons
+            , listagg(sales_reason_type, ', ') within group (order by sales_reason_name) as sales_reasons_type
+        from sales_reason_detail
+        group by sales_order_fk
+    )
+
+select  *
+from agg_sales_reason_detail
