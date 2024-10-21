@@ -1,7 +1,8 @@
 with 
     products as ( --504
         select
-            product_pk
+            product_sk
+            , product_pk
             , product_subcategory_fk
             , product_name
             , product_number
@@ -28,7 +29,8 @@ with
 
     , product_detailed as (
         select 
-            prod.product_pk
+            prod.product_sk
+            , prod.product_pk
             , prod.product_name
             , prod.product_number
 

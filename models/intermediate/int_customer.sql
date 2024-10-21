@@ -1,7 +1,8 @@
 with
     customer as (
         select 
-            customer_pk
+            customer_sk
+            , customer_pk
             , person_fk
             , territory_fk
         from {{ ref('stg_customer') }}
@@ -17,7 +18,8 @@ with
 
     , customer_detail as (
         select 
-            customer.customer_pk
+            customer.customer_sk
+            , customer.customer_pk
             -- , customer.person_fk
 
             -- , person.person_pk

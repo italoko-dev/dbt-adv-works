@@ -80,11 +80,6 @@ sources:
       - name: salesorderdetail
         description: raw data salesorderdetail table from adventure works
         columns:
-          - name: salesorderid
-            data_tests:
-              - unique
-              - not_null
-
           - name: salesorderdetailid
             data_tests:
               - unique

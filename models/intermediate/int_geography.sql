@@ -16,7 +16,8 @@ with
 
     , city as (
         select 
-            address_pk
+            address_sk
+            , address_pk
             , state_province_fk
             , address_city_name as city
         from {{ ref('stg_geo_city') }} geo_city
@@ -24,7 +25,8 @@ with
 
     , geography_detail as (
         select
-            city.address_pk
+            city.address_sk
+            , city.address_pk
             , city.city 
             , state.state
             , country.*
