@@ -1,8 +1,14 @@
 models:
-  - name: sales_order_header_sales_reason
+  - name: stg_sales_order_header_sales_reason
     description: This is the staging table for sales_order_header_sales_reason
 
     columns:
+      - name: sales_order_sk
+        description: to-do
+        data_tests:
+          - unique
+          - not_null
+
       - name: sales_reason_pk
         description: to-do
       
