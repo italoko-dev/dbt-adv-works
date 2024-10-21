@@ -20,12 +20,9 @@ with
         select 
             customer.customer_sk
             , customer.customer_pk
-            -- , customer.person_fk
-
-            -- , person.person_pk
             , person.person_full_name as customer_name
             -- , person.person_type
-        from customer inner join person on 
+        from customer left join person on 
             customer.person_fk = person.person_pk
     )
 
