@@ -5,6 +5,12 @@ models:
     description: This is the staging table for geo_address
 
     columns:
+      - name: address_sk
+        description: This is a surrogate key for a geo_address
+        data_tests:
+          - unique
+          - not_null
+
       - name: address_pk
         description: This is a primary key for a geo_address
       

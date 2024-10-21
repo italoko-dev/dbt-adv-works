@@ -1,9 +1,9 @@
 with
     employee as (
         select
-            businessentityid as employee_pk
-            , nationalidnumber as employee_nat_id_number
-            , jobtitle as employee_job_title
+            cast(businessentityid as int) as employee_pk
+            , cast(nationalidnumber as string) as employee_nat_id_number
+            , cast(jobtitle as string) as employee_job_title
         from {{ source('adv_works', 'employee') }}        
     )
 
