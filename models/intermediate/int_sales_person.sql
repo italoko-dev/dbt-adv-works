@@ -1,7 +1,8 @@
 with
     sales_person as (
         select 
-            sales_person_pk
+            sales_person_sk
+            , sales_person_pk
             , sales_person_territory_fk
         from {{ ref('stg_sales_person') }}
     )
@@ -23,7 +24,8 @@ with
 
     , sales_person_detail as (
         select 
-            sales_person.sales_person_pk
+            sales_person.sales_person_sk
+            , sales_person.sales_person_pk
             , person.person_full_name as sales_person_name
             , employee.employee_job_title
         from sales_person 
