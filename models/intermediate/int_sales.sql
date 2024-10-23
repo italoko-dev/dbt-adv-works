@@ -2,12 +2,13 @@ with
     sales_header as ( -- cnt 31465
         select
             sales_order_header_pk
+            , to_number(to_char(sales_order_date, 'YYYYMMDD')) as sales_order_date_fk
             , sales_order_customer_fk
             , sales_order_sales_person_fk
             , sales_order_territory_fk
             , sales_order_cred_card_fk
             , sales_order_address_id_fk
-            
+                        
             , sales_order_date
             , sales_order_status
             
@@ -37,6 +38,7 @@ with
             , sales_header.sales_order_header_pk
             -- sales_detail.sales_order_header_fk
             -- , sales_detail.sales_order_detail_pk
+            , sales_header.sales_order_date_fk
             , sales_detail.sales_order_product_fk
             , sales_detail.sales_order_qtd
             , sales_detail.sales_order_prod_unit_price

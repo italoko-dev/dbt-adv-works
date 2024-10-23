@@ -1,20 +1,23 @@
 with  
-    sales_header as (
-        select
-            sales_order_header_pk
-            , sales_order_date
-        from {{ ref('stg_sales_order_header') }}
+    raw_generated_data as (
+        -- min(sales_order_date) = 2011-05-31, max(sales_order_date) = 2014-06-30
+        {{ dbt_date.get_date_dimension("2011-01-01", "2020-12-31") }}
     )
-
-    , sales_header_dates as (
+    
+    , selected_generated_data as (
         select
-            *
-            ,  year(sales_order_date) as sales_order_date_year
-            ,  month(sales_order_date) as sales_order_date_month
-            ,  to_char(sales_order_date, 'YYYY-MM') sales_order_date_year_month
-            ,  day(sales_order_date) as sales_order_date_day
-        from sales_header
+            to_number(to_char(date_day, 'YYYYMMDD')) as date_day_key
+            , date_day as sales_order_date 
+            , year_number as  sales_order_date_year
+            , quarter_of_year as sales_order_date_quarter
+            , month_of_year as sales_order_date_month
+            , month_name as sales_order_date_month_name
+            , day_of_week as sales_order_date_week
+            , day_of_week_name as sales_order_date_week_name
+            , day_of_week_name_short as sales_order_date_week_name_short
+            , day_of_month as sales_order_date_day
+        from raw_generated_data
     )
 
 select *
-from sales_header_dates
+from selected_generated_data    
