@@ -5,12 +5,6 @@ models:
     description: This is the staging table for person
 
     columns:
-      - name: person_sk
-        description: This is a surrogate key for a person
-        data_tests:
-          - unique
-          - not_null
-
       - name: person_pk
         description: This is a unique identifier for a person
 

@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_product_subcategory
+    description: Staging table for subcategory of the product
+
+    columns:
+
+      - name: product_subcategory_pk
+        description: to-do
+
+      - name: product_category_fk
+        description: to-do
+
+      - name: product_subcategory
+        description: to-do

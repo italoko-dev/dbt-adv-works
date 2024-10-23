@@ -1,0 +1,10 @@
+models:
+  - name: stg_sales_order_header_sales_reason
+    description: This is the staging table for sales_order_header_sales_reason
+
+    columns:
+      - name: sales_reason_pk
+        description: to-do
+      
+      - name: sales_order_fk
+        description: to-do

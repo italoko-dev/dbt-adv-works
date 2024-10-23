@@ -80,11 +80,6 @@ sources:
       - name: salesorderdetail
         description: raw data salesorderdetail table from adventure works
         columns:
-          - name: salesorderid
-            data_tests:
-              - unique
-              - not_null
-
           - name: salesorderdetailid
             data_tests:
               - unique
@@ -98,6 +93,22 @@ sources:
             data_tests:
               - unique
               - not_null
+      
+      - name: productcategory
+        description: raw data product table from adventure works
+        columns:
+          - name: productcategoryid
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: productsubcategory
+        description: raw data product table from adventure works
+        columns:
+          - name: productsubcategoryid
+            data_tests:
+              - unique
+              - not_null
 
       - name: creditcard
         description: raw data credit card table from adventure works
@@ -107,12 +118,6 @@ sources:
               - unique
               - not_null
 
-      - name: specialoffer
-        description: raw data special offer table from adventure works
-        columns:
-          - name: specialofferid
-            data_tests:
-              - unique
-              - not_null
-
+      - name: salesorderheadersalesreason
+        description: Cross-reference table mapping sales orders to sales reason codes.
       
