@@ -2,7 +2,7 @@ with
     sales_2011 as (
         select 
             sum(sales_order_qtd * sales_order_prod_unit_price) as sales_order_total_due -- = 12646112.1607
-        from {{ ref('fact_sales_order_detail') }}
+        from {{ ref('int_sales') }}
         where 
             left(sales_order_date, 4) = '2011'
     )
